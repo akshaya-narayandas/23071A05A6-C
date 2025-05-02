@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chats</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h3>All Expenses</h3>
+    <% for (let chat of chats) { %>
+        <div>
+            <p>description: <%= chat.desc %></p>
+            <p>category: <%= chat.cat %></p>
+            <p>Amount: <%= chat.amount %></p>
+            <p>date: <%= chat.date %></p>
+
+            <!-- Edit button (GET request) -->
+            <form method="GET" action="/chats/<%= chat._id %>/edit">
+                <button>Edit</button>
+            </form>
+
+            <!-- Delete button (POST + _method=DELETE) -->
+            <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+                <button>Delete</button>
+            </form>
+        </div>
+        <hr>
+    <% } %>
+
+    <form method="GET" action="/new">
+        <button>Create a New expenses</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Chat</title>
+</head>
+<body>
+    <form method="POST" action="/chats/<%= chats._id %>/edit?_method=PATCH">
+        <h3>This expense belongs to <%= chats._id %></h3>
+        <p>This expense is all about <%= chats.desc %></p>
+        <p>This expense is all category  <%= chats.cat %></p>
+        <textarea rows="10" name="amount"><%= chats.amount %></textarea>
+        <button>Edit</button>
+    </form>
+</body>
+</html>

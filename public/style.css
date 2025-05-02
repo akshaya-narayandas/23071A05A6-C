@@ -1,0 +1,19 @@
+body {
+    border:2px solid black;
+}
+h3 {
+    border:2px solid black;
+    background-color: darkblue;
+    color : whitesmoke;
+    height : 30px;
+    text-align: center;
+    padding-top : 30px;
+    font-weight:bolder;
+}
+div {
+    height : 300px;
+    width : 200px;
+    padding : 30px;
+    margin:30px;
+    background-color: lightblue;
+}
